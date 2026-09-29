@@ -1,11 +1,11 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="bg-mist-950">
+  <div class="bg-mist-950 min-h-screen">
     <!-- TITLE CARD -->
-    <div class="flex justify-center py-[2rem]">
+    <div class="flex justify-center py-4 md:py-8 gap-10">
       <svg
-        class="h-[5rem] w-[5rem]"
+        class="h-12 w-12 md:h-20 md:w-20"
         viewBox="0 0 32 32"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -25,34 +25,46 @@
       </h1>
     </div>
     <!-- MAIN DIV -->
-    <div class="flex h-[100vh] my-2 divide-y w-1/2 mx-auto">
+    <div
+      class="flex flex-col md:flex-row min-h-[calc(100vh-8rem)] my-2 w-full px-4 md:px-0 md:w-2/3 mx-auto"
+    >
       <!-- SIDEBAR -->
-      <sidebar class="min-w-1/5 mr-2 text-mist-600">
-        <h2 class="text-mist-300 font-bold ml-2">N A V I G A T I O N</h2>
-        <hr class="border-t border-mist-800" />
-        <ul class="flex space-y-[0.5rem] flex-col mt-2">
+      <sidebar
+        class="w-full md:w-1/5 md:min-w-[150px] md:max-w-[150px] mb-6 md:mb-0 md:mr-4 text-mist-600"
+      >
+        <h2 class="text-mist-300 font-bold ml-2 tracking-wider text-xs md:text-sm">
+          N A V I G A T I O N
+        </h2>
+        <hr class="border-t border-mist-800 my-1" />
+        <ul class="flex flex-row md:flex-col gap-4 md:gap-0 md:space-y-[0.5rem] mt-2">
           <RouterLink
             to="/"
-            class="relative hover:rounded-t-xl hover:text-mist-300 transition-all duration-200"
+            class="relative hover:rounded-t-xl hover:text-mist-300 transition-all duration-200 block py-1"
           >
             <div
-              class="active_indicator | absolute top-0 bottom-0 w-0 bg-emerald-500 rounded-sm transition-all"
+              class="active_indicator | absolute block md:hidden left-0 right-0 bottom-0 w-full h-1 bg-emerald-500 rounded-sm transition-all"
+            ></div>
+            <div
+              class="active_indicator | absolute hidden md:block top-0 bottom-0 w-0 bg-emerald-500 rounded-sm transition-all"
             ></div>
             <p class="ml-2">Home</p>
           </RouterLink>
           <RouterLink
             to="/refType"
-            class="relative hover:rounded-t-xl hover:text-mist-300 transition-all duration-100"
+            class="relative hover:rounded-t-xl hover:text-mist-300 transition-all duration-200 block py-1"
           >
             <div
-              class="active_indicator | absolute top-0 bottom-0 w-0 bg-emerald-500 rounded-sm transition-all"
+              class="active_indicator | absolute block md:hidden left-0 right-0 bottom-0 w-full h-1 bg-emerald-500 rounded-sm transition-all"
+            ></div>
+            <div
+              class="active_indicator | absolute hidden md:block top-0 bottom-0 w-0 bg-emerald-500 rounded-sm transition-all"
             ></div>
             <p class="ml-2">RefType</p>
           </RouterLink>
         </ul>
       </sidebar>
       <!-- PAGE CONTENT -->
-      <div class="">
+      <div class="flex-1 w-full">
         <RouterView />
       </div>
     </div>

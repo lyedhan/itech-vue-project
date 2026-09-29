@@ -15,8 +15,10 @@ function toggleMessage() {
 <template>
   <h1 class="text-3xl font-bold text-mist-300 mb-2">Ref() and User Interaction</h1>
   <hr class="border-b text-mist-800 mt-6 mb-4" />
-  <div class="flex">
-    <div class="h-[200px] w-1/3 border-1 border-mist-800 rounded-xl m-2">
+  <div class="flex flex-col md:flex-row">
+    <div
+      class="h-auto md:h-[200px] w-full md:w-1/3 border-1 border-mist-800 rounded-xl m-2 p-4 md:p-0"
+    >
       <h2 class="flex justify-center text-2xl font-bold text-emerald-500 mb-1 mt-6">
         {{ message }}
       </h2>
@@ -29,7 +31,7 @@ function toggleMessage() {
       </button>
     </div>
     <pre
-      class="w-2/3 border border-mist-800 rounded-xl m-2 bg-[#060708] text-mist-500 p-2 text-sm text-wrap max-h-[300px] overflow-y-auto"
+      class="w-full md:w-2/3 border border-mist-800 rounded-xl m-2 bg-[#060708] text-mist-500 p-2 text-sm text-wrap max-h-[300px] overflow-y-auto"
     >
 <span class="keytitle">import</span> <span class="varbright">{</span> ref <span class="varbright">}</span> <span class="keytitle">from</span> <span class="vartext">'vue'</span>
 

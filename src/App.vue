@@ -26,13 +26,13 @@
     </div>
     <!-- MAIN DIV -->
     <div
-      class="flex flex-col md:flex-row min-h-[calc(100vh-8rem)] my-2 w-full px-4 md:px-0 md:w-2/3 mx-auto"
+      class="flex flex-col md:flex-row min-h-[calc(100vh-8rem)] mt-2 w-full px-4 md:px-0 md:max-w-[50rem] mx-auto"
     >
       <!-- SIDEBAR -->
       <sidebar
         class="w-full md:w-1/5 md:min-w-[150px] md:max-w-[150px] mb-6 md:mb-0 md:mr-4 text-mist-600"
       >
-        <h2 class="text-mist-300 font-bold ml-2 tracking-wider text-xs md:text-sm">
+        <h2 class="text-mist-300 font-bold md:ml-2 tracking-wider text-xs md:text-sm">
           N A V I G A T I O N
         </h2>
         <hr class="border-t border-mist-800 my-1" />
@@ -42,24 +42,48 @@
             class="relative hover:rounded-t-xl hover:text-mist-300 transition-all duration-200 block py-1"
           >
             <div
-              class="active_indicator | absolute block md:hidden left-0 right-0 bottom-0 w-full h-1 bg-emerald-500 rounded-sm transition-all"
+              class="active_indicator | absolute block md:hidden left-0 right-0 bottom-0 w-full h-1 rounded-sm transition-all"
             ></div>
             <div
-              class="active_indicator | absolute hidden md:block top-0 bottom-0 w-0 bg-emerald-500 rounded-sm transition-all"
+              class="active_indicator | absolute hidden md:block top-0 bottom-0 w-0 rounded-sm transition-all"
             ></div>
-            <p class="ml-2">Home</p>
+            <p class="md:ml-2">Home</p>
           </RouterLink>
           <RouterLink
             to="/refType"
             class="relative hover:rounded-t-xl hover:text-mist-300 transition-all duration-200 block py-1"
           >
             <div
-              class="active_indicator | absolute block md:hidden left-0 right-0 bottom-0 w-full h-1 bg-emerald-500 rounded-sm transition-all"
+              class="active_indicator | absolute block md:hidden left-0 right-0 bottom-0 w-full h-1 rounded-sm transition-all"
             ></div>
             <div
-              class="active_indicator | absolute hidden md:block top-0 bottom-0 w-0 bg-emerald-500 rounded-sm transition-all"
+              class="active_indicator | absolute hidden md:block top-0 bottom-0 w-0 rounded-sm transition-all"
             ></div>
-            <p class="ml-2">RefType</p>
+            <p class="md:ml-2">RefType (deprecated)</p>
+          </RouterLink>
+          <RouterLink
+            to="/slides"
+            class="relative hover:rounded-t-xl hover:text-mist-300 transition-all duration-200 block py-1"
+          >
+            <div
+              class="active_indicator | absolute block md:hidden left-0 right-0 bottom-0 w-full h-1 rounded-sm transition-all"
+            ></div>
+            <div
+              class="active_indicator | absolute hidden md:block top-0 bottom-0 w-0 rounded-sm transition-all"
+            ></div>
+            <p class="md:ml-2">Presentation</p>
+          </RouterLink>
+          <RouterLink
+            to="/tutorial"
+            class="relative hover:rounded-t-xl hover:text-mist-300 transition-all duration-200 block py-1"
+          >
+            <div
+              class="active_indicator | absolute block md:hidden left-0 right-0 bottom-0 w-full h-1 rounded-sm transition-all"
+            ></div>
+            <div
+              class="active_indicator | absolute hidden md:block top-0 bottom-0 w-0 rounded-sm transition-all"
+            ></div>
+            <p class="md:ml-2">Tutorial</p>
           </RouterLink>
         </ul>
       </sidebar>
@@ -76,8 +100,15 @@
   color: white;
 
   .active_indicator {
-    width: 0.25rem;
     transition-duration: 1;
+    background-color: var(--color-emerald-500);
+
+    @media (width >= 48rem) {
+      width: 0.25rem;
+    }
+    @media (width < 48rem) {
+      width: auto;
+    }
   }
 }
 </style>

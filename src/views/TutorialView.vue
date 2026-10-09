@@ -113,7 +113,7 @@
         <img
           src="../img/tutorial/active_menu.png"
           alt=""
-          class="md:mb-6 md:mt-2 rounded-2xl max-w-[30rem] mx-auto aspect-auto object-cover"
+          class="md:mb-6 md:mt-2 rounded-2xl max-w-[26rem] mx-auto aspect-auto object-cover"
         />
       </div>
     </section>

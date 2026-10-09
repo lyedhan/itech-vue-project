@@ -50,18 +50,6 @@
             <p class="md:ml-2">Home</p>
           </RouterLink>
           <RouterLink
-            to="/refType"
-            class="relative hover:rounded-t-xl hover:text-mist-300 transition-all duration-200 block py-1"
-          >
-            <div
-              class="active_indicator | absolute block md:hidden left-0 right-0 bottom-0 w-full h-1 rounded-sm transition-all"
-            ></div>
-            <div
-              class="active_indicator | absolute hidden md:block top-0 bottom-0 w-0 rounded-sm transition-all"
-            ></div>
-            <p class="md:ml-2">RefType (deprecated)</p>
-          </RouterLink>
-          <RouterLink
             to="/slides"
             class="relative hover:rounded-t-xl hover:text-mist-300 transition-all duration-200 block py-1"
           >
@@ -83,12 +71,24 @@
             <div
               class="active_indicator | absolute hidden md:block top-0 bottom-0 w-0 rounded-sm transition-all"
             ></div>
-            <p class="md:ml-2">Tutorial</p>
+            <p class="md:ml-2">Setup Tutorial</p>
+          </RouterLink>
+          <RouterLink
+            to="/tutorial2"
+            class="relative hover:rounded-t-xl hover:text-mist-300 transition-all duration-200 block py-1"
+          >
+            <div
+              class="active_indicator | absolute block md:hidden left-0 right-0 bottom-0 w-full h-1 rounded-sm transition-all"
+            ></div>
+            <div
+              class="active_indicator | absolute hidden md:block top-0 bottom-0 w-0 rounded-sm transition-all"
+            ></div>
+            <p class="md:ml-2">Development Tutorial</p>
           </RouterLink>
         </ul>
       </sidebar>
       <!-- PAGE CONTENT -->
-      <div class="flex-1 w-full">
+      <div class="min-w-0 flex-1 w-full">
         <RouterView />
       </div>
     </div>

@@ -6,7 +6,9 @@
     <section class="mb-4">
       <h2 class="text-xl font-bold text-mist-300 mb-1">Introduction</h2>
       <div class="text-mist-600">
-        &lt; To be honest i don't really know what to put here yet, i'll have a think >
+        This tutorial will guide you through the installation, and then later through the creation
+        of a Vue.js project that will showcase some of its features. Hopefully this will convince
+        you to look into the framework in the future!
       </div>
     </section>
     <section class="mb-4">
@@ -89,10 +91,9 @@
           can load our Vue.js project!
         </p>
         <p>
-          Search for a <strong>package.json</strong> file, and within that file look for the
-          highlighted line in the image, and change it to
-          <strong>"dev": "vite --host 0.0.0.0"</strong>. This is necessary so that we can access Vue
-          from outside the Docker container it is in.
+          Search for a <code>package.json</code> file, and within that file look for the highlighted
+          line in the image, and change it to <code>"dev": "vite --host 0.0.0.0"</code>. This is
+          necessary so that we can access Vue from outside the Docker container it is in.
         </p>
         <img
           src="../img/tutorial/dev_host.png"
@@ -122,6 +123,8 @@
       <div class="text-mist-600 space-y-4 block">
         <p>
           Good job! You've created a bare-bones Vue.js web project. Now we have a base to work from.
+          Follow the next part of the tutorial on the
+          <RouterLink to="/tutorial2"><strong>Development Tutorial</strong></RouterLink> page.
         </p>
         <img
           src="../img/tutorial/web_base.png"
@@ -131,27 +134,15 @@
       </div>
     </section>
 
-    
-    <!-- ========================================== -->
-    <!-- SECTION: Building the Christmas Market Page -->
-    <!-- ========================================== -->
-
-    <section>
-      <h2 class="text-xl font-bold text-mist-300 mb-1">Building the Paisley Christmas Market Demo Page</h2>
-      <div class="text-mist-600 space-y-4 block">
-        <p>
-          Now that we have a base to work from, let's build something real: a landing page for a (fictional)
-          <strong>Paisley Christmas Market</strong>. By the end, you will have used Vue's reactivity, components, props, and live filtering.
-        </p>
-      </div>
-    </section>
-    
-   
     <div class="h-50"></div>
   </div>
 </template>
 <style scoped>
 strong {
   color: var(--color-emerald-600);
+}
+
+code {
+  color: var(--color-mist-300);
 }
 </style>

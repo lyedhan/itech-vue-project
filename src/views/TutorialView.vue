@@ -130,6 +130,23 @@
         />
       </div>
     </section>
+
+    
+    <!-- ========================================== -->
+    <!-- SECTION: Building the Christmas Market Page -->
+    <!-- ========================================== -->
+
+    <section>
+      <h2 class="text-xl font-bold text-mist-300 mb-1">Building the Paisley Christmas Market Demo Page</h2>
+      <div class="text-mist-600 space-y-4 block">
+        <p>
+          Now that we have a base to work from, let's build something real: a landing page for a (fictional)
+          <strong>Paisley Christmas Market</strong>. By the end, you will have used Vue's reactivity, components, props, and live filtering.
+        </p>
+      </div>
+    </section>
+    
+   
     <div class="h-50"></div>
   </div>
 </template>
